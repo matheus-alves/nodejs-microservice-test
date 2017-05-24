@@ -1,4 +1,9 @@
 {
   "name": "nodejs-microservice-test",
-  "author": "Matheus Alves"
+  "author": "Matheus Alves",
+  "main": "server.js",
+  "dependencies": {
+    "restify": "^4.3.0",
+    "winston": "^2.3.1"
+  }
 }
