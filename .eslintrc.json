@@ -1,0 +1,17 @@
+{
+  "extends": "standard",
+  "rules": {
+    "semi": 0
+  },
+  "plugins": [
+    "standard",
+    "promise"
+  ],
+  "ignore-pattern": "node_modules/",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "node": true
+  }
+}
