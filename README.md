@@ -93,12 +93,13 @@ When creating documents you may have missing information, but you can't have pro
 
 ### POST /people
 
-Creates one or more resources. One if receiving an object or many if receiving an array. When post data to this API the application the expectation is:
+Creates one or more resources.
+One if receiving an object or many if receiving an array. When posting data to this API the application expectation is:
 
 * the application is going to validate the body payload and reply with errors when they do not respect the data schema;
 * the data sent to the endpoint is going to be inserted into a MongoDB collection;
 * the inserted documents (with the generated IDs) must be queued in an AMQP message broker (like RabbitMQ, ActiveMQ, Kafka);
-* the API returns HTTP 200 if having success;
+* the API returns HTTP 201 if having success;
 * the API returns HTTP 400 if payload doesn't match with the schema;
 * the API returns HTTP 500 in the case of unexpected error.
 
@@ -106,8 +107,8 @@ Creates one or more resources. One if receiving an object or many if receiving a
 
 Returns all people documents. When sending a GET request to this endpoint:
 
-* the API returns all documents of people collection
-* the API returns null if the database is empty
+* the API returns all documents of people collection;
+* the API returns null if the database is empty;
 * the API returns HTTP 200 if having success;
 * the API returns HTTP 500 in the case of unexpected error.
 
@@ -123,8 +124,8 @@ Returns a single document by id. When sending a GET request to this endpoint:
 ## Things you can't do when building your application
 
 * We don't want additional features. Please, stay focused on what is being requested;
-* If you are not able to implement all features, please implement what you can. Few features with quality are more valuable than all features with failures.
-* We want a human readable code. No need to have a full documentation, but some comments and clear coding are good practices;
+* If you are not able to implement all features, please implement what you can. Few features with quality are more valuable than all features with failures;
+* We want a human readable code. No need to have a full documentation, but some comments and clear coding are good practices.
 
 ## Things we would love to find in your project (aka - plus features)
 
