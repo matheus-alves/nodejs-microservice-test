@@ -6,6 +6,26 @@ This project contains a Node.js server that uses a microservice infrastructure f
 
 The description of the PoC goals can be seen below.
 
+## Requirements
+
+- Node.js (v6.10.3)
+
+## Setup
+
+In order to run the server simply clone it from this github repository and perform the following steps:
+
+    1. npm install
+    2. node server.js <PORT>
+    3. send requests to <HOST>:<PORT>/
+
+Where the *PORT* parameter on step 2 is optional and defaults to 8080
+
+## Unit Tests
+
+In order to run the unit tests and eslint tool use the following command:
+
+    npm test
+
 ## PoC Description
 
 The goal of this test is to apply some basic concepts of a microservice architecture using NodeJS stack.
