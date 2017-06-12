@@ -26,8 +26,14 @@ const controllers = {
   people: require(controllersPath + 'people.js')
 };
 
+// Validators
+const validatorsPath = './validators/';
+const validators = {
+  peopleValidator: require(validatorsPath + 'peoplevalidator.js')
+};
+
 // Requests configuration
-server.post('/people', controllers.people.addPeople);
+server.post('/people', validators.peopleValidator.validatePeople, controllers.people.addPeople);
 
 const logError = (error) => {
   logger.info(`Error starting ${server.name} server`);
